@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'question/base.css' %}"/>
+
+</head>
+<body>
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Ask</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0 w-75">
+        <input class="search form-control sm-2 w-75" type="text" placeholder="Search" aria-label="Search">
+        <button class="new_q btn btn-outline-success my-2 my-sm-0 w-25">New Q</button>
+      </form>
+
+        <div class="user_corner ml-auto mt-0 mr-5">
+            <img src="{% static 'avatar.png' %}"/>
+        </div>
+        <div>
+            <span> Name </span>
+            <br>
+            <a>Log out</a> <a>Settings</a>
+        </div>
+
+    </div>
+  </nav>
+</header>
+
+<main role="main" class="container">
+    <div class="row">
+
+        {% block content %}
+        {% endblock %}
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="font-italic">Popular Tags</h4>
+            <p class="mb-0">Tags</p>
+          </div>
+
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="font-italic">Best Users</h4>
+            <p class="mb-0">Users</p>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+</main>
+
+</body>
+</html>

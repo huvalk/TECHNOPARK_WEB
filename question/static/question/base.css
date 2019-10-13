@@ -1,0 +1,52 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.user_corner img {
+    height: 40px;
+    width: auto;
+    border: solid white 1px;
+    border-radius: 10%;
+}
+
+.row {
+    margin-top: 100px;
+}
+
+nav {
+    color: white;
+}
+
+.blog-main a {
+    font-size: 65%;
+}
+
+.blog-post a {
+    font-size: 16px;
+}
+
+.blog-post {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.blog-post img {
+    height: 105px;
+    width: auto;
+    border-radius: 10%;
+}
+
+.post-cont {
+    display:inline-block;
+}
+
+.avatar {
+    float: left;
+}
+
+.paginator, .page-item, .page-link {
+    font-size: 25px;
+}
