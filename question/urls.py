@@ -6,4 +6,5 @@ from . import views
 urlpatterns = [
     # base
     url(r'^$', views.index, name='index'),
+    url(r'^new/', views.new_question, name='new_question')
 ]

@@ -1,0 +1,46 @@
+{% extends 'question/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="col-md-8 blog-main">
+
+        <form action="#" class="needs-validation" novalidate>
+            <h3 class="pb-4 mb-4 border-bottom">
+                New Question
+            </h3>
+
+            <div class="mb-4">
+                <label for="q_title">Title</label>
+                <input type="text" class="form-control" id="q_title" placeholder="My question" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please enter the title
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="q_body">Title</label>
+                <textarea class="form-control" rows="8" id="q_body" placeholder="My question is..." maxlength="10000" required=""></textarea>
+                <div class="invalid-feedback">
+                    What was your question
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="q_tags">Title</label>
+                <input type="text" class="form-control" id="q_tags" placeholder="tag, tag, tag" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please enter the title
+                </div>
+            </div>
+
+
+          <button type="submit" class="btn btn-outline-success">Publicate</button>
+
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="{% static 'question/invalid.js' %}"></script>
+
+{% endblock %}
