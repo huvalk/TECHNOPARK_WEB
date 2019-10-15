@@ -34,8 +34,6 @@ nav {
 }
 
 .blog-post img {
-    height: 105px;
-    width: auto;
     border-radius: 10%;
 }
 
@@ -47,6 +45,28 @@ nav {
     float: left;
 }
 
+.top_avatar {
+    height: 120px;
+    width: auto;
+}
+
+.usual_avatar {
+    height: 105px;
+    width: auto;
+}
+
+.ans_avatar {
+    height: 90px;
+    width: auto;
+}
+
 .paginator, .page-item, .page-link {
     font-size: 25px;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
