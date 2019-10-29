@@ -1,0 +1,27 @@
+{% load static %}
+
+{% block header %}
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Ask</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0 w-75">
+        <input class="search form-control sm-2 w-75" type="text" placeholder="Search" aria-label="Search">
+        <a class="new_q btn btn-outline-success my-2 my-sm-0 w-25" role="button" href="{% url 'ask' %}">New Q</a>
+      </form>
+
+{% include 'question/user_corner.html' %}
+
+
+    </div>
+  </nav>
+</header>
+{% endblock %}

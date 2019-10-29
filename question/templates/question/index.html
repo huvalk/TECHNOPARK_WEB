@@ -5,107 +5,15 @@
 
     <div class="col-md-8 blog-main">
       <h3 class="pb-4 mb-4 border-bottom">
-          <span class="mr-2">Questions</span>
-          <a href="#" class="ml-auto">Hot questions</a>
+          <span class="mr-2">{{ tag }}</span>
+          <a href="{% url 'hot' %}" class="ml-auto">Hot questions</a>
       </h3>
 
-      <div class="blog-post mb-5 bg-light">
-          <div class="post-cont w-auto mr-3 avatar">
-              <img class="usual_avatar" src="{% static 'avatar.png' %}"/>
-              <br>
-              <div class="d-flex justify-content-between">
-                  <button type="button" class="btn btn-sm btn-outline-dark">L</button>
-                  <b>5k</b>
-                  <button type="button" class="btn btn-sm btn-outline-dark">D</button>
-              </div>
-          </div>
+        {% include 'question/one_question.html' %}
 
+        {% include 'question/one_question.html' %}
 
-          <!-- Изменить верстку. Сделать все по колонкам  -->
-          <div class="post-cont w-75 mb-3">
-              <h2 class="blog-post-title">Question №1</h2>
-              <h5>by <a href="#">Chris</a></h5>
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-              <span class="text-muted">December 14, 2013</span>
-              <a href="{% url 'question' %}">Answer (<b class="likes">5</b>)</a>
-              <span class="text-muted">tags: <a href="#">KnowHow</a></span>
-
-          </div>
-        </div>
-
-        <div class="blog-post mb-5 bg-light">
-          <div class="post-cont w-auto mr-3 avatar">
-              <img class="usual_avatar" src="{% static 'avatar.png' %}"/>
-              <br>
-              <div class="d-flex justify-content-between">
-                  <button type="button" class="btn btn-sm btn-outline-dark">L</button>
-                  <b>5k</b>
-                  <button type="button" class="btn btn-sm btn-outline-dark">D</button>
-              </div>
-          </div>
-
-          <div class="post-cont w-75  mb-3">
-              <h2 class="blog-post-title">Question №1</h2>
-              <h5>by <a href="#">Chris</a></h5>
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-              <span class="text-muted">December 14, 2013</span>
-              <a href="{% url 'question' %}">Answer (<b class="likes">5</b>)</a>
-              <span class="text-muted">tags: <a href="#">KnowHow</a></span>
-
-          </div>
-        </div>
-
-        <div class="blog-post mb-5 bg-light">
-          <div class="post-cont w-auto mr-3 avatar">
-              <img class="usual_avatar" src="{% static 'avatar.png' %}"/>
-              <br>
-              <div class="d-flex justify-content-between">
-                  <button type="button" class="btn btn-sm btn-outline-dark">L</button>
-                  <b>5k</b>
-                  <button type="button" class="btn btn-sm btn-outline-dark">D</button>
-              </div>
-          </div>
-
-          <div class="post-cont w-75  mb-3">
-              <h2 class="blog-post-title">Question №1</h2>
-              <h5>by <a href="#">Chris</a></h5>
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-              How to do How to do How to do How to do How to do How to do How to do
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-              <span class="text-muted">December 14, 2013</span>
-              <a href="{% url 'question' %}">Answer (<b class="likes">5</b>)</a>
-              <span class="text-muted">tags: <a href="#">KnowHow</a></span>
-
-          </div>
-        </div>
+        {% include 'question/one_question.html' %}
 
         <nav aria-label="Page navigation example">
       <ul class="pagination">

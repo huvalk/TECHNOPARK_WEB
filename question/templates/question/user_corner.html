@@ -1,0 +1,12 @@
+{% load static %}
+
+{% block user_corner %}
+        <div class="user_corner ml-auto mt-0 mr-3">
+            <img src="{% static 'avatars/avatar.png' %}"/>
+        </div>
+        <div>
+            <span> Name </span>
+            <br>
+            <a class="mr-2">Settings</a> <a>Log out</a>
+        </div>
+{% endblock %}
