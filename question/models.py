@@ -66,7 +66,7 @@ class Answer(models.Model):
         verbose_name_plural = 'Answers'
 
     def __str__(self):
-        return self.correct
+        return "%r" % self.correct
 
 
 class TagPivot(models.Model):
