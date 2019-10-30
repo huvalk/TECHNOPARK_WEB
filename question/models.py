@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User, UserManager
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 
@@ -79,3 +80,19 @@ class TagPivot(models.Model):
 
     def __str__(self):
         return 'TagPivot'
+
+
+# class Like(models.Model):
+#     value = models.IntegerField(
+#         default=0,
+#         validators=[MaxValueValidator(1), MinValueValidator(-1)]
+#      )
+#
+#     member = models.ForeignKey('Member', on_delete=models.CASCADE, verbose_name='Member')
+#
+#     class Meta:
+#         verbose_name = 'Like'
+#         verbose_name_plural = 'Likes'
+#
+#     def __str__(self):
+#         return '%d' % self.value

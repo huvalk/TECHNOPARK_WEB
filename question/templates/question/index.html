@@ -9,11 +9,11 @@
           <a href="{% url 'hot' %}" class="ml-auto">Hot questions</a>
       </h3>
 
-        {% include 'question/one_question.html' %}
+      {% for q in res %}
 
-        {% include 'question/one_question.html' %}
+            {% include 'question/one_question.html' with question=q %}
+      {% endfor %}
 
-        {% include 'question/one_question.html' %}
 
         <nav aria-label="Page navigation example">
       <ul class="pagination">

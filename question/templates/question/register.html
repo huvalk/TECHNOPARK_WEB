@@ -1,0 +1,71 @@
+{% extends 'question/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="col-md-8 blog-main">
+
+        <form action="#" class="needs-validation" novalidate>
+            <h3 class="pb-4 mb-4 border-bottom">
+                New Question
+            </h3>
+
+            <div class="mb-4 form-group form-inline justify-content-between">
+                <label for="login">Login</label>
+                <input type="text" class="form-control w-75" id="login" placeholder="Login" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please enter login
+                </div>
+            </div>
+
+            <div class="mb-4 form-group form-inline justify-content-between">
+                <label for="email">Email</label>
+                <input type="email" class="form-control w-75" id="Email" placeholder="Login" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please enter email
+                </div>
+            </div>
+
+             <div class="mb-4 form-group form-inline justify-content-between">
+                <label for="nick">Email</label>
+                <input type="text" class="form-control w-75" id="1" placeholder="Nickname" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please enter nickname
+                </div>
+            </div>
+
+{#            TODO добавление фотографии с компа#}
+             <div class="form-group form-inline justify-content-between">
+                <label for="avatar">Avatar</label>
+                <input type="file" class="no-border form-control w-75" id="1" placeholder="" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please choose avatar
+                </div>
+            </div>
+
+            <div class="mb-4 form-group form-inline justify-content-between">
+                <label for="pas1">Password</label>
+                <input type="password" class="form-control w-75" id="pas1" placeholder="Password" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please enter password
+                </div>
+            </div>
+
+            <div class="mb-4 form-group form-inline justify-content-between">
+                <label for="pas2">Repeat</label>
+                <input type="password" class="form-control w-75" id="pas2" placeholder="Password" maxlength="128" required="">
+                <div class="invalid-feedback">
+                    Please repeat password
+                </div>
+            </div>
+
+
+          <button type="submit" class="btn btn-outline-success">Ask</button>
+
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="{% static 'question/invalid.js' %}"></script>
+
+{% endblock %}

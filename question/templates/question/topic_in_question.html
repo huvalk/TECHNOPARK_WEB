@@ -1,9 +1,7 @@
 {% load static %}
 
-{% block one_question %}
-      <div class="blog-post mb-5 bg-light">
-          <div class="post-cont w-auto mr-3 avatar">
-              <img class="usual_avatar" src="{% static 'avatars/avatar.png' %}"/>
+        <div class="post-cont w-auto mr-3 avatar">
+              <img class="top_avatar" src="{% static 'avatars/avatar.png' %}"/>
               <br>
               <div class="d-flex justify-content-between">
                   <button type="button" class="btn btn-sm btn-outline-dark">L</button>
@@ -12,21 +10,15 @@
               </div>
           </div>
 
-
-          <!-- Изменить верстку. Сделать все по колонкам  -->
           <div class="post-cont w-75 mb-3">
-              <h2 class="blog-post-title">{{ question.head }}</h2>
+              <h2 class="blog-post-title"> {{ question.head }} </h2>
               <h5>by <a href="#">Chris</a></h5>
               {{ question.body }}
           </div>
 
           <div class="d-flex justify-content-between align-items-center">
               <span class="text-muted">December 14, 2013</span>
-              <a href="{% url 'question' val=question.id %}">Answer (<b class="likes">5</b>)</a>
               <span class="text-muted">tags: <a href="#">KnowHow</a></span>
 
           </div>
         </div>
-{% endblock %}
-
-<!--TODO нормальное создание вопроса -->
