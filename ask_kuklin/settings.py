@@ -53,7 +53,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'ask_kuklin.urls'
 
 MEDIA_ROOT = os.path.abspath(os.curdir)
-MEDIA_URL = '/question/static/'
+
+MEDIA_URL = '/media/'
 
 TEMPLATES = [
     {

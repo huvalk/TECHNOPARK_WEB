@@ -9,11 +9,15 @@
 
       <div class="blog-post mb-5 bg-info border-bottom">
 
-          {% include 'question/topic_in_question.html' with question=res %}
+          {% include 'question/topic_in_question.html' with question=ques%}
 
         <hr>
 
+          {% for a in ans %}
 
+              {% include 'question/one_answer.html' with answer=a%}
+
+          {% endfor %}
 
         <hr>
 
